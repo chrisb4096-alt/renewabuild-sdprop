@@ -151,6 +151,10 @@ dd { margin:0; color:var(--rb-mist); line-height:1.42; font-size:var(--body-size
 .site-slide h1 { max-width:9ch; text-shadow:0 2px 24px rgba(0,0,0,.8); margin:0; }
 .site-slide .eyebrow { margin:0; }
 .site-slide .subtitle { max-width:none; margin:0; background:rgba(14,20,18,.58); border-left:2px solid var(--rb-lake); padding:.7rem .9rem; line-height:1.35; }
+.phase-anchor { background:linear-gradient(180deg,rgba(167,201,87,.16),rgba(167,201,87,.04)); border-left:3px solid var(--rb-hemp); padding:.65rem .85rem; display:grid; gap:.18rem; }
+.pa-eyebrow { font-family:var(--font-display); color:var(--rb-hemp); font-size:clamp(.7rem,.9vw,.84rem); letter-spacing:.16em; text-transform:uppercase; font-weight:800; }
+.pa-stats { color:var(--rb-cream); font-size:clamp(.86rem,1.15vw,1.02rem); line-height:1.32; }
+.pa-stats b { color:var(--rb-cream); font-weight:700; }
 .site-photo-wrap { position:absolute; inset:0; z-index:-2; overflow:hidden; }
 .site-photo-wrap > img { width:100%; height:100%; object-fit:cover; max-height:none; filter:brightness(.72) saturate(.95) contrast(1.12); }
 .site-photo-wrap::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(14,20,18,.88) 0%,rgba(14,20,18,.35) 38%,rgba(14,20,18,.18) 100%); }
@@ -188,13 +192,20 @@ dd { margin:0; color:var(--rb-mist); line-height:1.42; font-size:var(--body-size
 .principles-slide .slide-content { padding-right:min(26vw,420px); }
 .incentive-slide .slide-content { padding-right:min(42vw,540px); }
 .closing-slide .slide-content { padding-right:min(42vw,540px); }
-.closing-slide h1 { max-width:10ch; }
+.closing-slide h1 { max-width:10ch; font-size:clamp(1.4rem,3.4vw,3.2rem); }
+.closing-slide .subtitle { font-size:clamp(.82rem,1.3vw,1.08rem); margin-top:clamp(.5rem,1vw,.9rem); line-height:1.36; max-width:720px; }
+.closing-slide .body-block { margin-top:clamp(.45rem,.9vh,.8rem); }
 .final-photo::after { background:linear-gradient(90deg, rgba(14,20,18,.96) 0%, rgba(14,20,18,.78) 46%, rgba(14,20,18,.34) 100%); }
-.yes-path { display:grid; gap:clamp(.45rem,1vh,.75rem); max-width:880px; }
-.yes-path div { display:grid; grid-template-columns:clamp(2.1rem,4vw,3rem) 1fr; gap:clamp(.5rem,1vw,.9rem); align-items:center; }
-.yes-path em { font-style:normal; font-family:var(--font-display); color:var(--rb-carbon); background:var(--rb-hemp); border-radius:50%; width:clamp(2rem,3vw,2.6rem); height:clamp(2rem,3vw,2.6rem); display:grid; place-items:center; font-weight:700; }
-.yes-path span { font-size:clamp(.9rem,1.45vw,1.22rem); color:var(--rb-limestone); border-bottom:1px solid rgba(231,225,212,.16); padding-bottom:.42rem; }
-.final-line { font-family:var(--font-editorial); font-weight:700; font-size:clamp(1.25rem,2.4vw,2.1rem); line-height:1.2; color:var(--rb-cream); max-width:720px; margin:clamp(1rem,2vw,1.6rem) 0 0; padding-left:clamp(.8rem,1.4vw,1.2rem); border-left:2px solid var(--rb-lake-light); }
+.yes-path { display:grid; gap:clamp(.28rem,.55vh,.5rem); max-width:880px; }
+.yes-path div { display:grid; grid-template-columns:clamp(1.85rem,3.2vw,2.4rem) 1fr; gap:clamp(.4rem,.8vw,.7rem); align-items:center; }
+.yes-path em { font-style:normal; font-family:var(--font-display); color:var(--rb-carbon); background:var(--rb-hemp); border-radius:50%; width:clamp(1.7rem,2.4vw,2.1rem); height:clamp(1.7rem,2.4vw,2.1rem); display:grid; place-items:center; font-weight:700; font-size:clamp(.78rem,1vw,.92rem); }
+.yes-path span { font-size:clamp(.82rem,1.18vw,1.05rem); color:var(--rb-limestone); border-bottom:1px solid rgba(231,225,212,.16); padding-bottom:.28rem; line-height:1.3; }
+.final-line { font-family:var(--font-editorial); font-weight:700; font-size:clamp(.98rem,1.8vw,1.55rem); line-height:1.2; color:var(--rb-cream); max-width:720px; margin:clamp(.55rem,1.2vw,1rem) 0 0; padding-left:clamp(.7rem,1.1vw,1rem); border-left:2px solid var(--rb-lake-light); }
+.closing-slide .concept-bounds { font-size:.95em; margin-bottom:clamp(.5rem,1vh,.85rem); }
+.closing-slide .cb-col { padding:clamp(.5rem,.9vw,.8rem) clamp(.7rem,1.05vw,.95rem); }
+.closing-slide .cb-col li { font-size:clamp(.78rem,1.05vw,.92rem); line-height:1.28; }
+.closing-slide .cb-label { font-size:clamp(.7rem,.92vw,.86rem); margin-bottom:clamp(.3rem,.6vw,.5rem); }
+.closing-slide .cb-col ul { gap:clamp(.22rem,.45vh,.36rem); }
 
 /* Adam-mode additions */
 .upside-symmetry { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(.6rem,1.4vw,1.2rem); max-width:1100px; margin-top:clamp(.4rem,1vh,.8rem); }
@@ -552,7 +563,7 @@ dd { margin:0; color:var(--rb-mist); line-height:1.42; font-size:var(--body-size
   <path d="M102 180 L418 142 L434 555 L82 585 Z" fill="#f2a65a" opacity=".16" stroke="#f2a65a" stroke-width="2" stroke-dasharray="10 10"/>
   <g class="site-labels">
     <text x="592" y="74">PHASE 1 · YOUR PARCELS</text>
-    <text x="210" y="166">OPTIONAL EXPANSION</text>
+    <text x="158" y="382">OPTIONAL EXPANSION</text>
     <text x="532" y="350">CREEK / EASEMENT CORRIDOR</text>
   </g>
 </svg>
@@ -562,6 +573,10 @@ dd { margin:0; color:var(--rb-mist); line-height:1.42; font-size:var(--body-size
           <div class="eyebrow reveal">Site concept</div>
           <h1 class="reveal delay-1">Site concept</h1>
           <p class="subtitle reveal delay-2">Conceptual PUD framing for your parcels near Townline Road and E Hammond Road. Not a survey or engineering plan.</p>
+          <div class="phase-anchor reveal delay-3">
+            <span class="pa-eyebrow">Phase 1 anchor</span>
+            <span class="pa-stats"><b>~17 acres</b> · <b>8–10 industrial lots</b> · creek easement strategy in play</span>
+          </div>
         </div>
         <div class="body-block">
       <div class="site-notes reveal delay-2">
